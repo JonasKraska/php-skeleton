@@ -2,4 +2,12 @@
 
 declare(strict_types=1);
 
-return require_once "vendor/kraska/coding-standard/.php-cs-fixer.dist.php";
+use Kraska\CodingStandard\PhpCsFixerRuleSetFactory;
+
+$finder = PhpCsFixer\Finder::create()
+    ->in(__DIR__);
+
+return (new PhpCsFixer\Config())
+    ->setRules(PhpCsFixerRuleSetFactory::create())
+    ->setRiskyAllowed(true)
+    ->setFinder($finder);
