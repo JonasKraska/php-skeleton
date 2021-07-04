@@ -11,7 +11,8 @@
         }
     ],
     "require": {
-        "php": ">=8.0"
+        "php": ">=8.0",
+        "composer/package-versions-deprecated": "1.11.99.2"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.15",
@@ -40,6 +41,7 @@
             "php vendor/bin/phpstan analyse --configuration=phpstan.dist.neon"
         ],
         "php:test": [
+            "composer validate",
             "php vendor/bin/phpunit"
         ]
     }

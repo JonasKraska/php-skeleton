@@ -5,4 +5,8 @@ parameters:
   paths:
     - ./
   excludePaths:
+    - ./bin/*
+    - ./config/*
+    - ./migrations/*
     - ./vendor/*
+    - ./var/*
